@@ -1,0 +1,54 @@
+@media only screen and (max-width: 600px) {
+    header {
+        height: 75px;
+    }
+    nav {
+        height: 50px;
+    }
+    .radios {
+        width: 20%;
+        height: 20px;
+    }
+    .inputs {
+        width: 80%;
+        height: 50px;
+        font-size: x-large;
+    }
+    label {
+        border-radius: 2%;
+    }
+    .show_div {
+        width: 80%;
+        height: 600px;
+        border: solid gray 2px;
+        background-color: #d8d8d8;
+    }
+    .show_div h2 {
+        font-size: large;
+        font-weight: bolder;
+        color: white;
+        text-shadow: gray 2px 2px;
+    }
+    img {
+        width: 70%;
+    }
+    .show_div h3 {
+        font-size: small;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        width: 80%;
+        text-align: center;
+        color: #4a4a4a;
+    }
+    .show_div article {
+        font-size: smaller;
+        overflow: hidden;
+        height: 200px;
+    }
+    .show_div article p {
+        /* overflow: hidden; */
+        width: 80%;
+        line-height: 1.0;
+        color: #4a4a4a;
+    }
+}
