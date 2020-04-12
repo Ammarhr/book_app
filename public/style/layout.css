@@ -1,11 +1,5 @@
 @media only screen and (max-width: 600px) {
-    body {
-        background-color: #9b9b9b;
-        font-size: x-large;
-    }
     header {
-        background-color: black;
-        color: white;
         height: 75px;
         display: flex;
         align-items: center;
@@ -30,11 +24,6 @@
     .radios {
         width: 20%;
         height: 20px;
-    }
-    .inputs {
-        width: 80%;
-        height: 50px;
-        font-size: x-large;
     }
     label {
         border-radius: 2%;

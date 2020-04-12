@@ -12,7 +12,8 @@
     .inputs {
         width: 80%;
         height: 50px;
-        font-size: x-large;
+        font-size: large;
+        font-weight: bolder;
     }
     label {
         border-radius: 2%;
