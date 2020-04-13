@@ -64,9 +64,9 @@ function bookSearches(req, res) {
 }
 
 function Book(data) {
-    this.title = data.volumeInfo.title;
-    this.author = data.volumeInfo.authors;
-    this.summary = data.volumeInfo.description;
+    this.title = data.volumeInfo.title || 'no title avilable';
+    this.author = data.volumeInfo.authors || 'no author name avilable';
+    this.summary = data.volumeInfo.description || 'no description avilable';
     if (data.volumeInfo.imageLinks) {
         this.image_url = data.volumeInfo.imageLinks.thumbnail;
     } else {
