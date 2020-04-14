@@ -13,21 +13,17 @@
 </head>
 
 <body>
-    <header>
-        <h1>Best Books!</h1>
-    </header>
-    <nav>
-        <h2>Search By Title Or Author</h2>
-    </nav>
+    <%- include('../layout/header') %>
+        <%- include('../layout/menue') %>
+            <main>
+                <form action="/searches" method="POST">
+                    <input type="text" name="search" id="indexbox" placeholder="Enter title/author" class="inputs">
+                    <label class="inputs"> <span>Title</span>  <input type="radio"  name="search" value="title" required class="radios"></label>
+                    <label class="inputs"> <span>Auther</span>  <input type="radio" name="search" value="author" required class="radios"></label>
+                    <button class="inputs">Search the google Book API</button>
 
-    <main>
-        <form action="/searches" method="POST">
-            <input type="text" name="search" id="indexbox" placeholder="Enter title/author" class="inputs">
-            <label class="inputs"> <span>Title</span>  <input type="radio"  name="search" value="title" required class="radios"></label>
-            <label class="inputs"> <span>Auther</span>  <input type="radio" name="search" value="author" required class="radios"></label>
-            <button class="inputs">Search the google Book API</button>
-        </form>
-    </main>
+                </form>
+            </main>
 
 </body>
 

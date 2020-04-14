@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books App</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/layout.css">
+    <link rel="stylesheet" href="/style/modules.css">
 </head>
 
 <body>
-    <header>
-        <h1>hello man</h1>
-    </header>
-    <ul>
+    <%- include('layout/header') %>
+        <%- include('layout/menue') %>
 
-        <li>
-            <a href="/search"> Search For A Book</a>
-        </li>
-
-    </ul>
-    <main></main>
-    <footer></footer>
+            <main id="show_main">
+                <% bookResults.forEach(val=>{ %>
+                    <div class="show_div">
+                        <img src=" <%= val.image_url %> " alt="">
+                        <h2>
+                            <%= val.title %>
+                        </h2>
+                        <h3>
+                            <%= val.author %>
+                        </h3>
+                        <article>
+                        </article>
+                        <a href="/books/<%= val.id %>" id="result"><button id="result">View Details</button></a>
+                    </div>
+                    <%});%>
+                        <footer></footer>
 </body>
 
 </html>

@@ -13,31 +13,41 @@
 
 
 <body>
-    <header>
-        <h1>Best Books!</h1>
-    </header>
-    <nav>
-        <h2>Search By Title Or Author</h2>
-    </nav>
+    <%- include('../layout/header') %>
+        <%- include('../layout/menue') %>
+            <main id="show_main">
+                <% book.forEach(val=>{ %>
+                    <div class="show_div">
+                        <img src=" <%= val.image_url %> " alt="">
+                        <h2>
+                            <%= val.title %>
+                        </h2>
+                        <h3>
+                            <%= val.author %>
+                        </h3>
+                        <article>
+                            <p>
+                                <%= val.summary %>
+                            </p>
+                        </article>
+                        <button class="select" name="select"> Select THis Book</button>
+                    </div>
+                    <form class="formData" action="/book" method="POST">
 
-    <main id="show_main">
-        <% book.forEach(val=>{ %>
-            <div class="show_div">
-                <img src=" <%= val.image_url %> " alt="">
-                <h2>
-                    <%= val.title %>
-                </h2>
-                <h3>
-                    <%= val.author %>
-                </h3>
-                <article>
-                    <p>
-                        <%= val.summary %>
-                    </p>
-                </article>
-            </div>
-            <%});%>
-    </main>
+                        <div>
+                            <input class="inputs2" type="text" name="title" placeholder="Title" value="<%=  val.title %>" required>
+                            <input class="inputs2" type="text" name="author" placeholder="Author" value="<%= val.author %>" required>
+                            <input class="inputs2" type="text" name="isbn" placeholder="ISBN" value="<%= val.isbn %>" required>
+                            <input class="inputs2" type="text" name="url" placeholder="Image URL" value="<%= val.image_url %>" required>
+                            <input class="inputs2" type="text" name="bookshelf" placeholder="bookshelf " value="" required>
+                            <textarea class="inputs2" name="description" cols="30" rows="10" required><%= val.summary %></textarea>
+                        </div>
+                        <button type="submit" class="button narrow">Add To DataBase</button>
+                    </form>
+                    <%});%>
+            </main>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+            <script src="app.js"></script>
 </body>
 
 </html>
