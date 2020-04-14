@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books App</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/layout.css">
+    <link rel="stylesheet" href="/style/modules.css">
+</head>
+
+<body>
+    <%- include('../layout/header') %>
+        <%- include('../layout/menue') %>
+            <main id="show_main">
+
+                <div class="show_div">
+                    <img src=" <%= book.image_url %> " alt="">
+                    <h2>
+                        <%= book.title %>
+                    </h2>
+                    <h3>
+                        <%= book.author %>
+                    </h3>
+                    <article>
+                        <p>
+                            <%= book.description %>
+                        </p>
+                    </article>
+                    <h3>
+                        <%= book.isbn %>
+                    </h3>
+                    <h4>
+                        <%= book.bookshelf %>
+                    </h4>
+                </div>
+                <footer></footer>
+</body>
+
+</html>
