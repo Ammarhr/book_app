@@ -1,0 +1,11 @@
+<form class="form" action="/update/<%= book.id %>?_method=put" method="POST" id="td">
+    <div>
+        <input class="inputs2 " type="text " name="title " placeholder="Title " value="<%=book.title %>" required>
+        <input class="inputs2" type="text" name="author" placeholder="Author" value="<%= book.author %>" required>
+        <input class="inputs2" type="text" name="isbn" placeholder="ISBN" value="<%= book.isbn %>" required>
+        <input class="inputs2" type="text" name="url" placeholder="Image URL" value="<%= book.image_url %>" required>
+        <input class="inputs2" type="text" name="bookshelf" placeholder="bookshelf " value="<%= book.bookshelf %>" required>
+        <textarea class="inputs2" name="description" cols="30" rows="10" required><%= book.description %></textarea>
+    </div>
+    <button type="submit">Update</button>
+</form>

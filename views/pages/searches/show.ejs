@@ -32,8 +32,7 @@
                         </article>
                         <button class="select" name="select"> Select THis Book</button>
                     </div>
-                    <form class="formData" action="/book" method="POST">
-
+                    <form class="form" action="/book/<%= val.id%>" method="POST">
                         <div>
                             <input class="inputs2" type="text" name="title" placeholder="Title" value="<%=  val.title %>" required>
                             <input class="inputs2" type="text" name="author" placeholder="Author" value="<%= val.author %>" required>

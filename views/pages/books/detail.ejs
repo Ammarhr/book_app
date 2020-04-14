@@ -35,8 +35,22 @@
                     <h4>
                         <%= book.bookshelf %>
                     </h4>
+                    <div id="delete-update">
+                        <button id="update" name="select"> Update Data</button>
+                        <form action="/delete/<%= book.id %>?_method=delete" method="POST" id="delete-form">
+                            <button type="submit" id="delete"> Delete</button>
+                        </form>
+                    </div>
                 </div>
-                <footer></footer>
+                <%- include('../layout/edit') %>
+                    <footer></footer>
+                    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+                    <script>
+                        $("#update").click(function() {
+                            $("#td").toggleClass("formData2");
+                        });
+                    </script>
 </body>
 
 </html>
