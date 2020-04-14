@@ -1,7 +1,7 @@
 # book_app
 --------------------------
 **Author**: Ammar Al-Hariry
-**Version**: 1.0.0 
+**Version**: 1.1.2
 
 -----------------------------------
 ## Overview
@@ -63,4 +63,10 @@ Number and name of feature: **6.  Home Page**
 Estimate of time needed to complete: 30 mins
 Start time: 10:30
 Finish time:11:00
+Actual time needed to complete: 30 mins
+------------------------------------------
+Number and name of feature: **6.  Detiles Page**
+Estimate of time needed to complete: 2 hours
+Start time: 4:00 pm /14/4/2020
+Finish time: 6:00
 Actual time needed to complete: 30 mins
